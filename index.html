@@ -1,364 +1,831 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Govind Sharma // Tech Portfolio</title>
-  <meta name="description" content="Govind Sharma — technology enthusiast exploring cybersecurity, AI, coding, robotics and web development.">
-  <meta name="theme-color" content="#030712">
-  <link rel="canonical" href="https://yoursite.com">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="theme-color" content="#17122b">
+  <meta name="description" content="The Compass Inside the Book — a fantasy adventure story by Govind Sharma.">
+
+  <title>The Compass Inside the Book — Govind Sharma</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <div id="progress"></div>
-  <div id="grid"></div>
-  <div id="particles"></div>
-  <div class="orb a"></div>
-  <div class="orb b"></div>
 
-  <header id="header">
-    <nav class="container">
-      <a class="logo" href="#home">GS//</a>
-      <ul class="navlinks" id="navlinks">
-        <li><a href="#about">About</a></li>
-        <li><a href="#interests">Interests</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#journey">Journey</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li>
-          <a class="navgithub" href="https://github.com/pn4986446-dotcom" target="_blank" rel="noopener noreferrer">
-            GitHub ↗
-          </a>
-        </li>
-      </ul>
-      <button class="menu" id="menu" aria-label="Open navigation menu">☰</button>
-    </nav>
+<body>
+
+  <!-- =========================
+       LOADING SCREEN
+  ========================== -->
+  <div id="loader">
+    <div class="loader-book">📖</div>
+    <div class="loader-title">Opening the Book...</div>
+    <div class="loader-bar">
+      <span></span>
+    </div>
+  </div>
+
+
+  <!-- =========================
+       NAVIGATION
+  ========================== -->
+  <header class="site-header">
+    <div class="nav-container">
+
+      <a href="#home" class="brand">
+        <span class="brand-icon">✦</span>
+        <span>THE COMPASS</span>
+      </a>
+
+      <button class="menu-button" id="menuButton" aria-label="Open menu">
+        ☰
+      </button>
+
+      <nav id="mainNav">
+        <a href="#home">Home</a>
+        <a href="#contents">Contents</a>
+        <a href="#chapters">Chapters</a>
+        <a href="#about">About</a>
+      </nav>
+
+    </div>
   </header>
 
-  <main id="home">
-    <!-- Hero Section -->
-    <section class="hero container">
-      <div class="reveal">
-        <div class="eyebrow">
-          <span class="live"></span>
-          SYSTEM • ONLINE
+
+  <main>
+
+    <!-- =========================
+         HERO / COVER
+    ========================== -->
+    <section id="home" class="hero">
+
+      <div class="stars"></div>
+
+      <div class="hero-content">
+
+        <div class="hero-badge">
+          ✦ A FANTASY ADVENTURE ✦
         </div>
-        <h1>Hi, I'm <span class="gradient">Govind<br>Sharma.</span></h1>
-        <div class="hero-sub">Cybersecurity • AI • Coding • Robotics • Web Development</div>
-        <p class="hero-copy">
-          A young student and technology enthusiast learning by building, experimenting and staying curious. 
-          This is my digital space for projects, interests and the journey ahead.
+
+        <h1>
+          The Compass
+          <span>Inside the Book</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          A mysterious book. A compass that sees the future.
+          A kingdom hidden between the pages.
         </p>
-        <div class="actions">
-          <a class="btn primary" href="#projects">Explore Projects →</a>
-          <a class="btn ghost" href="https://github.com/pn4986446-dotcom" target="_blank" rel="noopener noreferrer">
-            ⌘ GitHub
+
+        <div class="hero-author">
+          Written by <strong>Govind Sharma</strong>
+        </div>
+
+        <div class="hero-buttons">
+          <a href="#contents" class="btn btn-primary">
+            Begin the Story →
           </a>
+
+          <button class="btn btn-secondary" id="randomChapter">
+            ✦ Surprise Me
+          </button>
         </div>
-        <div class="hero-meta">
-          <span><i></i> Learning: Active</span>
-          <span><i></i> Building: Active</span>
-          <span><i></i> Exploring: Active</span>
-        </div>
+
       </div>
 
-      <div class="hud-wrap reveal">
-        <div class="hud">
-          <span class="hud-label label1">SECURE_CORE</span>
-          <span class="hud-label label2">AI_MODULE</span>
-          <span class="hud-label label3">ONLINE</span>
-          <div class="core">
-            <div class="core-icon">⌁</div>
-          </div>
-        </div>
+      <div class="hero-art">
+        <div class="floating-orb orb-one"></div>
+        <div class="floating-orb orb-two"></div>
+
+        <img
+          src="assets/cover.svg"
+          alt="The Compass Inside the Book cover artwork"
+          class="cover-art"
+        >
       </div>
+
+      <div class="scroll-hint">
+        <span>Scroll to enter the story</span>
+        <span class="arrow">↓</span>
+      </div>
+
     </section>
 
-    <!-- About Section -->
-    <section id="about">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="kicker">01 / Profile</span>
-          <h2 class="section-title">Curiosity <span>→ Creation</span></h2>
+
+    <!-- =========================
+         DEDICATION
+    ========================== -->
+    <section class="dedication section">
+
+      <div class="section-symbol">✦</div>
+
+      <p class="eyebrow">DEDICATION</p>
+
+      <h2>
+        For everyone who believes
+        <span>there is more beyond the page.</span>
+      </h2>
+
+      <p class="dedication-text">
+        May every book you open become a door,
+        every question become an adventure,
+        and every choice remind you that your future
+        is yours to write.
+      </p>
+
+      <div class="ornament">— ✦ —</div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTENTS
+    ========================== -->
+    <section id="contents" class="section contents-section">
+
+      <div class="section-heading">
+        <p class="eyebrow">THE STORY</p>
+
+        <h2>Table of Contents</h2>
+
+        <p>
+          Twelve chapters. One mysterious kingdom.
+          One choice that could change everything.
+        </p>
+      </div>
+
+      <div class="contents-grid">
+
+        <a href="#chapter1" class="contents-card">
+          <span class="chapter-number">01</span>
+          <div>
+            <h3>The Old Book</h3>
+            <p>A locked book reveals an impossible secret.</p>
+          </div>
+          <span class="card-arrow">→</span>
+        </a>
+
+        <a href="#chapter2" class="contents-card">
+          <span class="chapter-number">02</span>
+          <div>
+            <h3>A Page From Tomorrow</h3>
+            <p>A page describes an event that has not happened.</p>
+          </div>
+          <span class="card-arrow">→</span>
+        </a>
+
+        <a href="#chapter3" class="contents-card">
+          <span class="chapter-number">03</span>
+          <div>
+            <h3>The Door Inside the Book</h3>
+            <p>A hidden doorway leads somewhere impossible.</p>
+          </div>
+          <span class="card-arrow">→</span>
+        </a>
+
+        <a href="#chapter4" class="contents-card">
+          <span class="chapter-number">04</span>
+          <div>
+            <h3>Welcome to the Kingdom</h3>
+            <p>Aarav and Kabir discover Evermere.</p>
+          </div>
+          <span class="card-arrow">→</span>
+        </a>
+
+        <a href="#chapter5" class="contents-card">
+          <span class="chapter-number">05</span>
+          <div>
+            <h3>The King Without a Crown</h3>
+            <p>A missing crown hides a dangerous secret.</p>
+          </div>
+          <span class="card-arrow">→</span>
+        </a>
+
+        <a href="#chapter6" class="contents-card">
+          <span class="chapter-number">06</span>
+          <div>
+            <h3>The Future Has Changed</h3>
+            <p>The compass begins showing different futures.</p>
+          </div>
+          <span class="card-arrow">→</span>
+        </a>
+
+        <a href="#chapter7" class="contents-card">
+          <span class="chapter-number">07</span>
+          <div>
+            <h3>The Forbidden Chapter</h3>
+            <p>A forgotten chapter exposes the truth.</p>
+          </div>
+          <span class="card-arrow">→</span>
+        </a>
+
+        <a href="#chapter8" class="contents-card">
+          <span class="chapter-number">08</span>
+          <div>
+            <h3>The Person Behind the Mystery</h3>
+            <p>The mysterious storyteller finally appears.</p>
+          </div>
+          <span class="card-arrow">→</span>
+        </a>
+
+        <a href="#chapter9" class="contents-card">
+          <span class="chapter-number">09</span>
+          <div>
+            <h3>The Final Direction</h3>
+            <p>The compass leads toward its final destination.</p>
+          </div>
+          <span class="card-arrow">→</span>
+        </a>
+
+        <a href="#chapter10" class="contents-card">
+          <span class="chapter-number">10</span>
+          <div>
+            <h3>The Choice</h3>
+            <p>Aarav must choose the future of Evermere.</p>
+          </div>
+          <span class="card-arrow">→</span>
+        </a>
+
+        <a href="#chapter11" class="contents-card">
+          <span class="chapter-number">11</span>
+          <div>
+            <h3>The Kingdom's New Story</h3>
+            <p>Evermere begins writing its own future.</p>
+          </div>
+          <span class="card-arrow">→</span>
+        </a>
+
+        <a href="#chapter12" class="contents-card">
+          <span class="chapter-number">12</span>
+          <div>
+            <h3>The Last Page</h3>
+            <p>The final page reveals a new beginning.</p>
+          </div>
+          <span class="card-arrow">→</span>
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         STORY INTRO
+    ========================== -->
+    <section class="story-intro section">
+
+      <div class="story-intro-art">
+        <img
+          src="assets/compass.svg"
+          alt="Golden future compass"
+        >
+      </div>
+
+      <div class="story-intro-text">
+
+        <p class="eyebrow">BEFORE THE ADVENTURE</p>
+
+        <h2>
+          What if a book
+          <span>could show you tomorrow?</span>
+        </h2>
+
+        <p>
+          Aarav never expected to find anything unusual in his
+          grandfather's old study.
+        </p>
+
+        <p>
+          But behind a forgotten shelf was a locked ancient book.
+          Inside it rested a golden compass unlike anything he had
+          ever seen.
+        </p>
+
+        <p>
+          The compass did not point north.
+        </p>
+
+        <p class="highlight-text">
+          It pointed toward the future.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CHAPTERS
+    ========================== -->
+    <section id="chapters" class="chapters-section">
+
+      <!-- CHAPTER 1 -->
+      <article class="chapter" id="chapter1">
+
+        <div class="chapter-image">
+          <img src="assets/ancient-book.svg" alt="Ancient magical book">
         </div>
-        <div class="card about reveal">
+
+        <div class="chapter-content">
+
+          <p class="chapter-label">CHAPTER ONE</p>
+
+          <h2>The Old Book</h2>
+
+          <div class="chapter-divider">✦</div>
+
           <p>
-            I'm <strong>Govind Sharma</strong>, a young student and technology enthusiast who enjoys 
-            understanding how digital technology works.
+            Rain tapped against the windows of the old house as Aarav
+            explored his grandfather's study.
           </p>
+
           <p>
-            I'm especially interested in <strong>cybersecurity, artificial intelligence, coding, 
-            robotics and web development</strong>. I learn through projects, experimentation and hands-on practice.
+            Dust covered the shelves. Old maps hung on the walls.
+            A broken clock rested silently above the fireplace.
           </p>
+
           <p>
-            This portfolio represents a <strong>learning journey</strong>. It does not claim professional 
-            experience or qualifications I haven't earned.
+            Then Aarav noticed something strange.
           </p>
-        </div>
-      </div>
-    </section>
 
-    <!-- Interests Section -->
-    <section id="interests">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="kicker">02 / Explore</span>
-          <h2 class="section-title">My <span>Interests</span></h2>
-        </div>
-        <div class="grid">
-          <div class="card interest reveal">
-            <div class="icon">🔐</div>
-            <h3>Cybersecurity</h3>
-            <p>Learning security fundamentals, privacy, safe testing and defensive concepts.</p>
-          </div>
-          <div class="card interest reveal">
-            <div class="icon">🤖</div>
-            <h3>Artificial Intelligence</h3>
-            <p>Exploring AI tools and the ideas behind intelligent software.</p>
-          </div>
-          <div class="card interest reveal">
-            <div class="icon">💻</div>
-            <h3>Coding</h3>
-            <p>Practising programming and solving problems through small experiments.</p>
-          </div>
-          <div class="card interest reveal">
-            <div class="icon">🌐</div>
-            <h3>Web Development</h3>
-            <p>Building responsive interfaces with HTML, CSS and JavaScript.</p>
-          </div>
-          <div class="card interest reveal">
-            <div class="icon">🦾</div>
-            <h3>Robotics</h3>
-            <p>Interested in hardware, sensors, automation and software working together.</p>
-          </div>
-          <div class="card interest reveal">
-            <div class="icon">🚀</div>
-            <h3>Technology</h3>
-            <p>Following new tools, devices and ideas that make technology useful.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+          <p>
+            Behind a row of books was a small wooden door.
+            The key was already waiting in the lock.
+          </p>
 
-    <!-- Skills Section -->
-    <section id="skills">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="kicker">03 / Stack</span>
-          <h2 class="section-title">Learning <span>Stack</span></h2>
-        </div>
-        <div class="card skills reveal">
-          <div class="skill">
-            <div class="skilltop">
-              <span>HTML</span>
-              <span>82%</span>
-            </div>
-            <div class="bar"><b data-width="82%"></b></div>
-          </div>
-          <div class="skill">
-            <div class="skilltop">
-              <span>CSS</span>
-              <span>76%</span>
-            </div>
-            <div class="bar"><b data-width="76%"></b></div>
-          </div>
-          <div class="skill">
-            <div class="skilltop">
-              <span>JavaScript</span>
-              <span>62%</span>
-            </div>
-            <div class="bar"><b data-width="62%"></b></div>
-          </div>
-          <div class="skill">
-            <div class="skilltop">
-              <span>Python</span>
-              <span>55%</span>
-            </div>
-            <div class="bar"><b data-width="55%"></b></div>
-          </div>
-          <div class="skill">
-            <div class="skilltop">
-              <span>Cybersecurity Fundamentals</span>
-              <span>50%</span>
-            </div>
-            <div class="bar"><b data-width="50%"></b></div>
-          </div>
-          <div class="skill">
-            <div class="skilltop">
-              <span>Linux Fundamentals</span>
-              <span>48%</span>
-            </div>
-            <div class="bar"><b data-width="48%"></b></div>
-          </div>
-        </div>
-      </div>
-    </section>
+          <p>
+            Inside was a single ancient book wrapped in dark leather.
+            Its cover carried a golden compass symbol.
+          </p>
 
-    <!-- Projects Section -->
-    <section id="projects">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="kicker">04 / Build</span>
-          <h2 class="section-title">Selected <span>Projects</span></h2>
-        </div>
-        <div class="grid projects">
-          <div class="card project reveal">
-            <span class="tag">PERSONAL PROJECT</span>
-            <h3>Govind AI</h3>
-            <p>An experimental AI-themed interface and personal web project.</p>
-            <div class="stack">
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>JavaScript</span>
-            </div>
-            <a class="project-link" href="https://github.com/pn4986446-dotcom" target="_blank" rel="noopener noreferrer">
-              View GitHub →
-            </a>
+          <div class="story-quote">
+            “THE FUTURE IS NOT FIXED.”
           </div>
 
-          <div class="card project reveal">
-            <span class="tag">WEB PROJECT</span>
-            <h3>AI Tools Directory</h3>
-            <p>A concept for discovering and organising useful AI tools.</p>
-            <div class="stack">
-              <span>Web</span>
-              <span>UI</span>
-              <span>AI</span>
-            </div>
-            <a class="project-link" href="https://github.com/pn4986446-dotcom" target="_blank" rel="noopener noreferrer">
-              View GitHub →
-            </a>
-          </div>
+          <p>
+            When Aarav opened the book, a golden compass slipped
+            from between its pages.
+          </p>
 
-          <div class="card project reveal">
-            <span class="tag">WEB PROJECT</span>
-            <h3>Govind Finance Hub</h3>
-            <p>A finance-themed learning project focused on design and interactivity.</p>
-            <div class="stack">
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>JS</span>
-            </div>
-            <a class="project-link" href="https://github.com/pn4986446-dotcom" target="_blank" rel="noopener noreferrer">
-              View GitHub →
-            </a>
-          </div>
+          <p>
+            Its needle moved once.
+          </p>
 
-          <div class="card project reveal">
-            <span class="tag">LEARNING</span>
-            <h3>Cybersecurity Projects</h3>
-            <p>Safe learning experiments for understanding defensive cybersecurity concepts.</p>
-            <div class="stack">
-              <span>Security</span>
-              <span>Linux</span>
-              <span>Learning</span>
-            </div>
-            <a class="project-link" href="https://github.com/pn4986446-dotcom" target="_blank" rel="noopener noreferrer">
-              View GitHub →
-            </a>
-          </div>
+          <p class="highlight-text">
+            And pointed directly at him.
+          </p>
+
         </div>
-      </div>
-    </section>
 
-    <!-- Journey Section -->
-    <section id="journey">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="kicker">05 / Progress</span>
-          <h2 class="section-title">The <span>Journey</span></h2>
-        </div>
-        <div class="timeline">
-          <div class="event reveal">
-            <small>01 — DISCOVER</small>
-            <h3>Technology</h3>
-            <p>Started exploring computers, phones, apps and how digital systems work.</p>
-          </div>
-          <div class="event reveal">
-            <small>02 — LEARN</small>
-            <h3>Coding</h3>
-            <p>Began experimenting with HTML, CSS, JavaScript and programming concepts.</p>
-          </div>
-          <div class="event reveal">
-            <small>03 — EXPLORE</small>
-            <h3>Cybersecurity</h3>
-            <p>Developing an interest in privacy, security fundamentals and responsible learning.</p>
-          </div>
-          <div class="event reveal">
-            <small>04 — BUILD</small>
-            <h3>Projects</h3>
-            <p>Turning ideas into websites and experiments to learn through practice.</p>
-          </div>
-          <div class="event reveal">
-            <small>05 — NEXT</small>
-            <h3>Keep Growing</h3>
-            <p>Continuing to learn programming, cybersecurity, AI, robotics and emerging technology.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+      </article>
 
-    <!-- Goals Section -->
-    <section>
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="kicker">06 / Direction</span>
-          <h2 class="section-title">Future <span>Goals</span></h2>
+
+      <!-- CHAPTER 2 -->
+      <article class="chapter chapter-reverse" id="chapter2">
+
+        <div class="chapter-image">
+          <img src="assets/compass.svg" alt="Golden compass">
         </div>
-        <div class="card goals reveal">
-          <p>Build strong foundations, learn responsibly and create useful technology.</p>
-          <div class="goal-grid">
-            <div class="goal">CYBERSECURITY</div>
-            <div class="goal">PROGRAMMING</div>
-            <div class="goal">AI + ROBOTICS</div>
-            <div class="goal">BUILD + CREATE</div>
+
+        <div class="chapter-content">
+
+          <p class="chapter-label">CHAPTER TWO</p>
+
+          <h2>A Page From Tomorrow</h2>
+
+          <div class="chapter-divider">✦</div>
+
+          <p>
+            Aarav showed the compass to his best friend Kabir.
+            Neither of them could explain how it worked.
+          </p>
+
+          <p>
+            Then they discovered a page near the back of the book.
+          </p>
+
+          <p class="story-quote">
+            “Tomorrow at midnight, the kingdom will disappear.”
+          </p>
+
+          <p>
+            The boys stared at each other.
+          </p>
+
+          <p>
+            There was no kingdom near their town.
+            At least, not one they knew about.
+          </p>
+
+          <p>
+            Suddenly the compass began spinning.
+          </p>
+
+          <p>
+            It pointed toward the old library.
+          </p>
+
+          <p>
+            Behind a bookshelf they discovered a stone door.
+          </p>
+
+          <p class="highlight-text">
+            The compass pointed straight through it.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- CHAPTER 3 -->
+      <article class="chapter" id="chapter3">
+
+        <div class="chapter-image">
+          <img src="assets/magical-portal.svg" alt="Magical portal">
+        </div>
+
+        <div class="chapter-content">
+
+          <p class="chapter-label">CHAPTER THREE</p>
+
+          <h2>The Door Inside the Book</h2>
+
+          <div class="chapter-divider">✦</div>
+
+          <p>
+            The stone door opened without a sound.
+          </p>
+
+          <p>
+            Behind it was not another room.
+          </p>
+
+          <p>
+            It was a staircase.
+          </p>
+
+          <p>
+            The staircase stretched endlessly downward,
+            surrounded by floating books and glowing letters.
+          </p>
+
+          <p>
+            At the bottom stood a girl wearing a silver cloak.
+          </p>
+
+          <p>
+            Her name was Elara.
+          </p>
+
+          <p>
+            She told them they had entered a place that existed
+            between the pages of their world and another.
+          </p>
+
+          <div class="story-quote">
+            “Welcome to Evermere.”
           </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="kicker">07 / Connect</span>
-          <h2 class="section-title">Let's <span>Connect</span></h2>
+          <p>
+            Behind her, a distant kingdom flickered beneath a dark sky.
+          </p>
+
         </div>
-        <div class="card contact reveal">
-          <p>Want to see what I'm building?</p>
-          <a class="email" href="mailto:govindfinancehub@gmail.com">govindfinancehub@gmail.com</a>
-          <div class="actions" style="justify-content: center;">
-            <a class="btn primary" href="mailto:govindfinancehub@gmail.com">✉ Email Me</a>
-            <a class="btn ghost" href="https://github.com/pn4986446-dotcom" target="_blank" rel="noopener noreferrer">
-              ⌘ Visit GitHub
-            </a>
-            <button class="btn ghost" id="copy">Copy Email</button>
+
+      </article>
+
+
+      <!-- CHAPTER 4 -->
+      <article class="chapter chapter-reverse" id="chapter4">
+
+        <div class="chapter-image">
+          <img src="assets/evermere-castle.svg" alt="Evermere castle">
+        </div>
+
+        <div class="chapter-content">
+
+          <p class="chapter-label">CHAPTER FOUR</p>
+
+          <h2>Welcome to the Kingdom</h2>
+
+          <div class="chapter-divider">✦</div>
+
+          <p>
+            Evermere was unlike anything Aarav had ever imagined.
+          </p>
+
+          <p>
+            Towers floated above the clouds.
+            Rivers shimmered beneath moonlight.
+            Books grew like trees in the distant forests.
+          </p>
+
+          <p>
+            But something was wrong.
+          </p>
+
+          <p>
+            The kingdom was slowly disappearing.
+          </p>
+
+          <p>
+            King Orion told Aarav and Kabir that the magical crown
+            protecting Evermere had vanished.
+          </p>
+
+          <div class="story-quote">
+            “THE CROWN IS WHERE THE STORY ENDS.”
           </div>
+
+          <p>
+            Their journey led toward the northern forest.
+          </p>
+
         </div>
-      </div>
-    </section>
-  </main>
 
-  <footer>
-    <div class="container">
-      <div style="margin-bottom: 16px;">
-        <p>Govind Sharma © 2024. Learning in public.</p>
-      </div>
-      <div class="footer-links">
-        <a href="https://github.com/pn4986446-dotcom" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="mailto:govindfinancehub@gmail.com">Email</a>
-        <a href="#home">Back to Top</a>
-      </div>
-    </div>
-  </footer>
+      </article>
 
-  <button id="top" title="Back to top" aria-label="Back to top">↑</button>
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-  <script src="script.js"></script>
-</body>
-</html>
+      <!-- CHAPTER 5 -->
+      <article class="chapter" id="chapter5">
+
+        <div class="chapter-image">
+          <img src="assets/fox.svg" alt="Finn the magical fox">
+        </div>
+
+        <div class="chapter-content">
+
+          <p class="chapter-label">CHAPTER FIVE</p>
+
+          <h2>The King Without a Crown</h2>
+
+          <div class="chapter-divider">✦</div>
+
+          <p>
+            The northern forest was filled with glowing trees.
+          </p>
+
+          <p>
+            There Aarav met Finn, a clever fox who could speak.
+          </p>
+
+          <p>
+            Finn led them toward an ancient bridge called
+            the Shadow Bridge.
+          </p>
+
+          <p>
+            On the bridge they found a black feather.
+          </p>
+
+          <p>
+            King Orion recognized it immediately.
+          </p>
+
+          <p class="story-quote">
+            “That belonged to the Royal Storyteller.”
+          </p>
+
+          <p>
+            The storyteller had disappeared years ago.
+          </p>
+
+          <p>
+            But someone was clearly using his magic again.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- CHAPTER 6 -->
+      <article class="chapter chapter-reverse" id="chapter6">
+
+        <div class="chapter-image">
+          <img src="assets/compass.svg" alt="Compass showing different futures">
+        </div>
+
+        <div class="chapter-content">
+
+          <p class="chapter-label">CHAPTER SIX</p>
+
+          <h2>The Future Has Changed</h2>
+
+          <div class="chapter-divider">✦</div>
+
+          <p>
+            The compass suddenly changed direction.
+          </p>
+
+          <p>
+            It no longer pointed toward one future.
+          </p>
+
+          <p>
+            It showed many.
+          </p>
+
+          <p>
+            In the kingdom's ancient clock tower, Aarav discovered
+            hundreds of possible futures.
+          </p>
+
+          <div class="story-quote">
+            “THE FUTURE BELONGS TO THE CHOOSER.”
+          </div>
+
+          <p>
+            The compass finally pointed toward a hidden staircase.
+          </p>
+
+          <p>
+            At its bottom was a locked door marked:
+          </p>
+
+          <p class="highlight-text">
+            FORBIDDEN CHAPTER.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- CHAPTER 7 -->
+      <article class="chapter" id="chapter7">
+
+        <div class="chapter-image">
+          <img src="assets/ancient-book.svg" alt="Forbidden chapter">
+        </div>
+
+        <div class="chapter-content">
+
+          <p class="chapter-label">CHAPTER SEVEN</p>
+
+          <h2>The Forbidden Chapter</h2>
+
+          <div class="chapter-divider">✦</div>
+
+          <p>
+            The forbidden chapter revealed the history of Evermere.
+          </p>
+
+          <p>
+            The Royal Storyteller was named Malric.
+          </p>
+
+          <p>
+            He had once protected the kingdom.
+          </p>
+
+          <p>
+            But he discovered a dangerous ability:
+            the power to rewrite the future.
+          </p>
+
+          <p>
+            Malric believed that controlling the future
+            would prevent disaster.
+          </p>
+
+          <p class="story-quote">
+            “A perfect future is worth any sacrifice.”
+          </p>
+
+          <p>
+            The final page of the forbidden chapter was missing.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- CHAPTER 8 -->
+      <article class="chapter chapter-reverse" id="chapter8">
+
+        <div class="chapter-image">
+          <img src="assets/enchanted-forest.svg" alt="Enchanted forest">
+        </div>
+
+        <div class="chapter-content">
+
+          <p class="chapter-label">CHAPTER EIGHT</p>
+
+          <h2>The Person Behind the Mystery</h2>
+
+          <div class="chapter-divider">✦</div>
+
+          <p>
+            Malric finally appeared.
+          </p>
+
+          <p>
+            He was not the monster Aarav expected.
+          </p>
+
+          <p>
+            He believed he was protecting Evermere.
+          </p>
+
+          <p>
+            He showed Aarav a terrible possible future.
+          </p>
+
+          <p>
+            Cities could fall.
+            The kingdom could disappear.
+            Everyone could lose everything.
+          </p>
+
+          <p class="story-quote">
+            “ONLY THE HOLDER CAN CHOOSE THE FINAL PAGE.”
+          </p>
+
+          <p>
+            Aarav finally understood why the compass had chosen him.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- CHAPTER 9 -->
+      <article class="chapter" id="chapter9">
+
+        <div class="chapter-image">
+          <img src="assets/royal-crown.svg" alt="Crown of Evermere">
+        </div>
+
+        <div class="chapter-content">
+
+          <p class="chapter-label">CHAPTER NINE</p>
+
+          <h2>The Final Direction</h2>
+
+          <div class="chapter-divider">✦</div>
+
+          <p>
+            Malric took the crown.
+          </p>
+
+          <p>
+            The entire kingdom began changing around them.
+          </p>
+
+          <p>
+            Towers moved.
+            Roads disappeared.
+            Pages turned by themselves.
+          </p>
+
+          <p>
+            Aarav chased Malric through the collapsing kingdom.
+          </p>
+
+          <p>
+            Then something unexpected happened.
+          </p>
+
+          <p>
+            The golden compass cracked.
+          </p>
+
+          <div class="story-quote">
+            “THE FUTURE CANNOT BE FOUND.”
+          </div>
+
+          <p>
+            Aarav looked at the broken compass.
+          </p>
+
+          <p class="highlight-text">
+            Maybe the future was never meant to be found.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- CHAPTER 10 -->
+      <article class="chapter chapter-reverse" id="chapter10">
+
+        <div class="chapter-image">
+          <img src="assets/magical-portal.svg" alt="Two possible futures">
+        </div>
+
+        <div class="chapter-content">
+
+          <p class="chapter-label">CHAPTER TEN</p>
+
+          <h2>The Choice</h2>
+
