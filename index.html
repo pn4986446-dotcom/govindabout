@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Govind's colourful web project">
+  <title>Govind — Creative Web</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Background -->
+  <div class="background-orb orb-one"></div>
+  <div class="background-orb orb-two"></div>
+  <div class="background-orb orb-three"></div>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <a href="#home" class="brand">
+      <span class="brand-mark">G</span>
+      <span>Govind</span>
+    </a>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <button class="account-nav-btn" id="openAccountBtn">
+        <span id="navAccountIcon">◉</span>
+        <span id="navAccountText">Account</span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <main>
+
+    <section class="hero" id="home">
+
+      <div class="hero-content">
+        <div class="eyebrow">
+          <span class="status-dot"></span>
+          Creative Web • Coding • Technology
+        </div>
+
+        <h1>
+          Build something
+          <span>awesome.</span>
+        </h1>
+
+        <p>
+          A colourful space for projects, experiments, coding ideas
+          and digital creations.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#projects" class="primary-btn">Explore Projects →</a>
+          <button class="secondary-btn" id="heroAccountBtn">
+            Open Account
+          </button>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="hero-card-top">
+          <span>GOVIND</span>
+          <span class="mini-dot"></span>
+        </div>
+
+        <div class="code-preview">
+          <span>&lt;</span><strong>creative</strong><span>/&gt;</span>
+        </div>
+
+        <div class="hero-card-bottom">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JS</span>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Projects -->
+    <section class="section" id="projects">
+      <div class="section-heading">
+        <span>01</span>
+        <h2>Projects</h2>
+      </div>
+
+      <div class="project-grid">
+
+        <article class="project-card">
+          <div class="project-icon">⌘</div>
+          <h3>Govind Codes</h3>
+          <p>
+            Coding, web development and technology experiments.
+          </p>
+          <span class="project-tag">Development</span>
+        </article>
+
+        <article class="project-card">
+          <div class="project-icon">✦</div>
+          <h3>AI Tools</h3>
+          <p>
+            Exploring useful AI tools and creative digital ideas.
+          </p>
+          <span class="project-tag">AI</span>
+        </article>
+
+        <article class="project-card">
+          <div class="project-icon">◈</div>
+          <h3>Web Experiments</h3>
+          <p>
+            Interactive websites, animations and UI experiments.
+          </p>
+          <span class="project-tag">Web</span>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section about-section" id="about">
+      <div class="section-heading">
+        <span>02</span>
+        <h2>About</h2>
+      </div>
+
+      <div class="about-card">
+        <div class="about-avatar">G</div>
+
+        <div>
+          <h3>Govind Sharma</h3>
+          <p>
+            Building colourful and interactive web experiences
+            while learning coding, AI and cybersecurity.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div>
+      <strong>Govind</strong>
+      <span> • Creative Web</span>
+    </div>
+
+    <p>Created by GOVIND SHARMA</p>
+  </footer>
+
+
+  <!-- ======================================================
+       ACCOUNT MODAL
+  ======================================================= -->
+
+  <div class="modal-overlay" id="accountModal" aria-hidden="true">
+
+    <div class="account-modal">
+
+      <button class="close-btn" id="closeAccountBtn" aria-label="Close">
+        ×
+      </button>
+
+      <!-- Suitcase animation -->
+      <div class="login-scene">
+
+        <div class="scene-floor"></div>
+
+        <div class="scene-person">
+          <div class="person-head"></div>
+          <div class="person-body"></div>
+          <div class="person-leg leg-one"></div>
+          <div class="person-leg leg-two"></div>
+        </div>
+
+        <div class="suitcase">
+          <div class="suitcase-handle"></div>
+          <div class="suitcase-lid"></div>
+          <div class="suitcase-body">
+            <span>G</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Authentication -->
+      <div id="authView">
+
+        <div class="modal-heading">
+          <span class="modal-label">ACCOUNT</span>
+          <h2>Welcome back.</h2>
+          <p>Sign in to continue to your account.</p>
+        </div>
+
+        <div class="auth-tabs">
+          <button class="auth-tab active" data-tab="login">
+            Login
+          </button>
+
+          <button class="auth-tab" data-tab="signup">
+            Create Account
+          </button>
+        </div>
+
+
+        <!-- Login -->
+        <form id="loginForm" class="auth-form">
+
+          <label>
+            Username
+            <input
+              id="loginUsername"
+              type="text"
+              autocomplete="username"
+              placeholder="Enter your username"
+              required
+            >
+          </label>
+
+          <label>
+            Password
+            <div class="password-field">
+              <input
+                id="loginPassword"
+                type="password"
+                autocomplete="current-password"
+                placeholder="Enter your password"
+                required
+              >
+
+              <button
+                type="button"
+                class="password-toggle"
+                data-target="loginPassword"
+              >
+                Show
+              </button>
+            </div>
+          </label>
+
+          <p class="form-error" id="loginError"></p>
+
+          <button class="auth-submit" type="submit">
+            Login →
+          </button>
+
+        </form>
+
+
+        <!-- Signup -->
+        <form id="signupForm" class="auth-form hidden">
+
+          <label>
+            Display name
+            <input
+              id="signupName"
+              type="text"
+              autocomplete="name"
+              placeholder="Your name"
+              required
+            >
+          </label>
+
+          <label>
+            Username
+            <input
+              id="signupUsername"
+              type="text"
+              autocomplete="username"
+              placeholder="Choose a username"
+              required
+            >
+          </label>
+
+          <label>
+            Password
+            <div class="password-field">
+              <input
+                id="signupPassword"
+                type="password"
+                autocomplete="new-password"
+                placeholder="Create a password"
+                minlength="6"
+                required
+              >
+
+              <button
+                type="button"
+                class="password-toggle"
+                data-target="signupPassword"
+              >
+                Show
+              </button>
+            </div>
+          </label>
+
+          <p class="form-error" id="signupError"></p>
+
+          <button class="auth-submit" type="submit">
+            Create Account →
+          </button>
+
+        </form>
+
+        <div class="prototype-note">
+          🔒 Your password is never displayed on this page.
+        </div>
+
+      </div>
+
+
+      <!-- Logged-in account -->
+      <div id="loggedInView" class="hidden">
+
+        <div class="profile-header">
+          <div class="profile-avatar" id="profileAvatar">G</div>
+
+          <div>
+            <span class="modal-label">SIGNED IN</span>
+            <h2 id="profileName">Account</h2>
+            <p id="profileUsername">@username</p>
+          </div>
+        </div>
+
+        <div class="account-actions">
+
+          <button
+            class="account-action admin-action hidden"
+            id="openAdminBtn"
+          >
+            ⚙ Admin Panel
+          </button>
+
+          <button
+            class="account-action"
+            id="logoutBtn"
+          >
+            ↪ Log Out
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ======================================================
+       ADMIN MODAL
+  ======================================================= -->
+
+  <div class="modal-overlay" id="adminModal" aria-hidden="true">
+
+    <div class="admin-modal">
+
+      <button class="close-btn" id="closeAdminBtn">×</button>
+
+      <div class="admin-header">
+        <div>
+          <span class="modal-label">ADMIN</span>
+          <h2>Account Management</h2>
+          <p>Manage accounts and permissions.</p>
+        </div>
+
+        <span class="admin-badge">ADMIN ACCESS</span>
+      </div>
+
+      <div class="admin-stats">
+
+        <div>
+          <strong id="totalAccounts">0</strong>
+          <span>Accounts</span>
+        </div>
+
+        <div>
+          <strong id="adminAccounts">0</strong>
+          <span>Admins</span>
+        </div>
+
+      </div>
+
+      <div class="admin-toolbar">
+        <input
+          type="search"
+          id="adminSearch"
+          placeholder="Search accounts..."
+        >
+
+        <button id="resetTestAccountsBtn" class="danger-outline">
+          Reset Test Accounts
+        </button>
+      </div>
+
+      <div id="adminAccountList" class="admin-account-list"></div>
+
+    </div>
+  </div>
+
+
+  <!-- ======================================================
+       EDIT ACCOUNT MODAL
+  ======================================================= -->
+
+  <div class="modal-overlay" id="editModal" aria-hidden="true">
+
+    <div class="edit-modal">
+
+      <button class="close-btn" id="closeEditBtn">×</button>
+
+      <span class="modal-label">EDIT ACCOUNT</span>
+
+      <h2>Edit account</h2>
+
+      <form id="editAccountForm">
+
+        <input type="hidden" id="editAccountId">
+
+        <label>
+          Display name
+          <input id="editName" type="text" required>
+        </label>
+
+        <label>
+          Username
+          <input id="editUsername" type="text" required>
+        </label>
+
+        <label>
+          New password
+          <input
+            id="editPassword"
+            type="password"
+            placeholder="Leave empty to keep current password"
+          >
+        </label>
+
+        <p class="edit-password-note">
+          Existing passwords are never shown.
+        </p>
+
+        <p class="form-error" id="editError"></p>
+
+        <button class="auth-submit" type="submit">
+          Save Changes
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+
+
+  <!-- Toast -->
+  <div id="toast" class="toast"></div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
